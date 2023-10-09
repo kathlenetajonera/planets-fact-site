@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    color: #fff;
+    background-color: #070722;
+}
+
+h1,
+h2 {
+    font-family: var(--font-antonio);
+    color: #fff;
+}
+
+button,
+p {
+    font-family: var(--font-league-spartan);
+}

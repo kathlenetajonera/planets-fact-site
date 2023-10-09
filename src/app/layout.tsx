@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { antonio, league_spartan } from './fonts';
+import Header from '@/_components/Header';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -13,11 +14,15 @@ export default function RootLayout({
     children: React.ReactNode;
 }) {
     return (
-        <html lang="en">
-            <body
-                className={`${antonio.className} ${league_spartan.className}`}
-            >
-                {children}
+        <html
+            lang="en"
+            className={`${antonio.variable} ${league_spartan.variable}`}
+        >
+            <body>
+                <div className="min-h-screen bg-stars bg-cover">
+                    <Header />
+                    {children}
+                </div>
             </body>
         </html>
     );
