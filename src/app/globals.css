@@ -17,3 +17,7 @@ button,
 p {
     font-family: var(--font-league-spartan);
 }
+
+.slick-active {
+    z-index: 1;
+}

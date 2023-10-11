@@ -19,7 +19,7 @@ export default function RootLayout({
             className={`${antonio.variable} ${league_spartan.variable}`}
         >
             <body>
-                <div className="min-h-screen bg-stars bg-cover">
+                <div className="min-h-screen bg-stars bg-cover bg-fixed">
                     <Header />
                     {children}
                 </div>
