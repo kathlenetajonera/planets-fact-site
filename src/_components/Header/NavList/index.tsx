@@ -1,4 +1,5 @@
 import data from './data';
+import NavItem from '../NavItem';
 
 const NavList = () => {
     return (
@@ -7,12 +8,7 @@ const NavList = () => {
             xl:mt-0 xl:flex-1 xl:justify-end`}
         >
             {data.map(({ id, label }) => (
-                <li
-                    id={id}
-                    className="text-gray text-sm font-bold uppercase xl:ml-8"
-                >
-                    {label}
-                </li>
+                <NavItem key={id} href={id} label={label} />
             ))}
         </ul>
     );

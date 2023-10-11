@@ -1,34 +1,34 @@
 export default [
     {
-        id: 'mercury',
+        id: '/mercury',
         label: 'mercury',
     },
     {
-        id: 'venus',
+        id: '/venus',
         label: 'venus',
     },
     {
-        id: 'earth',
+        id: '/earth',
         label: 'earth',
     },
     {
-        id: 'mars',
+        id: '/mars',
         label: 'mars',
     },
     {
-        id: 'jupiter',
+        id: '/jupiter',
         label: 'jupiter',
     },
     {
-        id: 'saturn',
+        id: '/saturn',
         label: 'saturn',
     },
     {
-        id: 'uranus',
+        id: '/uranus',
         label: 'uranus',
     },
     {
-        id: 'neptune',
+        id: '/neptune',
         label: 'neptune',
     },
 ];
