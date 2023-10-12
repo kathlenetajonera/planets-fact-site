@@ -23,6 +23,7 @@ const config: Config = {
                 saturn: '#cb5020',
                 uranus: '#1ec2a4',
                 neptune: '#2d68f0',
+                loading: '#1c1c30',
             },
             backgroundImage: {
                 stars: `url('/images/background-stars.svg')`,

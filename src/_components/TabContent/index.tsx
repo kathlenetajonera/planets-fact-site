@@ -5,6 +5,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Content from './Content';
+import LoadingContent from '../LoadingContent';
 
 type Props = {
     planet: string;
@@ -52,7 +53,7 @@ const TabContent = ({ planet, data }: Props) => {
         );
     }
 
-    return <></>;
+    return <LoadingContent />;
 };
 
 export default TabContent;
