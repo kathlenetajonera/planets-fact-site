@@ -41,9 +41,13 @@ const TabContent = ({ planet, data }: Props) => {
     if (hasLoaded) {
         return (
             <Slider ref={sliderRef} {...config}>
-                <Content {...data.overview} {...commonProps} />
-                <Content {...data.structure} {...commonProps} />
-                <Content {...data.geology} {...commonProps} />
+                <Content data={data.overview} {...commonProps} />
+                <Content data={data.structure} {...commonProps} />
+                <Content
+                    data={data.geology}
+                    {...commonProps}
+                    mainImage={data.overview.image}
+                />
             </Slider>
         );
     }

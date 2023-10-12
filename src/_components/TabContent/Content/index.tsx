@@ -1,37 +1,45 @@
 import Image from 'next/image';
 import { tabButtons } from '../data';
+import { TabDataType } from '@/app/[planet]/types';
 import SourceIcon from '@/_components/Icons/SourceIcon';
 import TabButton from '@/_components/TabButton';
 
 type Props = {
     name: string;
-    image: string;
-    content: string;
-    source: string;
+    data: TabDataType;
+    mainImage?: string;
     activeTab: number;
     setActiveTab: (val: number) => void;
 };
 
-const Content = ({
-    name,
-    image,
-    content,
-    source,
-    activeTab,
-    setActiveTab,
-}: Props) => {
+const Content = ({ name, data, activeTab, setActiveTab, mainImage }: Props) => {
+    const { image, content, source } = data;
+
     return (
         <div>
-            <div className="relative text-center px-8 mt-32 sm:mt-0 xl:flex xl:items-center xl:px-0 xl:mt-24">
-                <div className="my-16 xl:basis-full xl:my-0">
+            <div className="relative text-center px-8 pb-8 mt-32 sm:mt-0 xl:pb-20 xl:flex xl:px-0 xl:mt-24">
+                <div className="relative my-16 xl:basis-full xl:mt-12">
                     <Image
-                        src={image}
+                        src={mainImage || image}
                         priority={true}
-                        alt="earth"
+                        alt={name}
                         width={200}
                         height={200}
                         className="mx-auto sm:w-64 xl:w-[28rem]"
                     />
+
+                    {mainImage && (
+                        <div className="absolute left-1/2 -bottom-16 -translate-x-1/2">
+                            <Image
+                                src={image}
+                                priority={true}
+                                alt={name}
+                                width={110}
+                                height={150}
+                                className="sm:w-[163px]"
+                            />
+                        </div>
+                    )}
                 </div>
 
                 <div className="sm:flex sm:gap-20 xl:flex-col xl:basis-2/4 xl:gap-8">
