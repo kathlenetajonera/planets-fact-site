@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion';
+import { staggerVariant } from '../TabContent/Content/transitions';
 import { antonio } from '@/app/fonts';
 
 type Props = {
@@ -7,7 +9,8 @@ type Props = {
 
 const DetailCard = ({ label, value }: Props) => {
     return (
-        <div
+        <motion.div
+            variants={staggerVariant}
             className={`flex items-center justify-between px-6 py-3 border-[1px] border-light-gray mb-2 last:mb-0
             sm:flex-col sm:items-start sm:p-4 sm:mr-4 sm:last:mr-0 sm:mb-0 sm:flex-1`}
         >
@@ -17,7 +20,7 @@ const DetailCard = ({ label, value }: Props) => {
             <p className={`text-xl ${antonio.className} uppercase sm:text-2xl`}>
                 {value}
             </p>
-        </div>
+        </motion.div>
     );
 };
 

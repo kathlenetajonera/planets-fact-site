@@ -1,4 +1,11 @@
 import Image from 'next/image';
+import { motion } from 'framer-motion';
+import {
+    containerVariant,
+    imageVariant,
+    staggerVariant,
+    tabVariant,
+} from './transitions';
 import { tabButtons } from '../data';
 import { TabDataType } from '@/app/[planet]/types';
 import SourceIcon from '@/_components/Icons/SourceIcon';
@@ -19,14 +26,16 @@ const Content = ({ name, data, activeTab, setActiveTab, mainImage }: Props) => {
         <div>
             <div className="relative text-center px-8 pb-8 mt-32 sm:mt-0 xl:pb-20 xl:flex xl:px-0 xl:mt-24">
                 <div className="relative my-16 xl:basis-full xl:mt-12">
-                    <Image
-                        src={mainImage || image}
-                        priority={true}
-                        alt={name}
-                        width={200}
-                        height={200}
-                        className="mx-auto sm:w-64 xl:w-[28rem]"
-                    />
+                    <motion.div variants={imageVariant}>
+                        <Image
+                            src={mainImage || image}
+                            priority={true}
+                            alt={name}
+                            width={200}
+                            height={200}
+                            className="mx-auto sm:w-64 xl:w-[28rem]"
+                        />
+                    </motion.div>
 
                     {mainImage && (
                         <div className="absolute left-1/2 -bottom-16 -translate-x-1/2">
@@ -43,15 +52,27 @@ const Content = ({ name, data, activeTab, setActiveTab, mainImage }: Props) => {
                 </div>
 
                 <div className="sm:flex sm:gap-20 xl:flex-col xl:basis-2/4 xl:gap-8">
-                    <div className="sm:text-left">
-                        <h1 className="text-[2.5rem] uppercase xl:text-[5rem]">
+                    <motion.div
+                        variants={containerVariant}
+                        className="sm:text-left"
+                    >
+                        <motion.h1
+                            variants={staggerVariant}
+                            className="text-[2.5rem] uppercase xl:text-[5rem]"
+                        >
                             {name}
-                        </h1>
-                        <p className="text-sm text-lighter-gray leading-6 my-6 xl:text-base xl:mt-4">
+                        </motion.h1>
+                        <motion.p
+                            variants={staggerVariant}
+                            className="text-sm text-lighter-gray leading-6 my-6 xl:text-base xl:mt-4"
+                        >
                             {content}
-                        </p>
+                        </motion.p>
 
-                        <p className="flex items-center justify-center text-gray sm:justify-start">
+                        <motion.p
+                            variants={staggerVariant}
+                            className="flex items-center justify-center text-gray sm:justify-start"
+                        >
                             Source:
                             <a
                                 href={source}
@@ -63,10 +84,11 @@ const Content = ({ name, data, activeTab, setActiveTab, mainImage }: Props) => {
                             <span className="mb-1">
                                 <SourceIcon />
                             </span>
-                        </p>
-                    </div>
+                        </motion.p>
+                    </motion.div>
 
-                    <div
+                    <motion.div
+                        variants={tabVariant}
                         className={`absolute top-0 left-0 -translate-y-[124px] flex justify-between w-full border-y-[1px] border-y-light-gray px-8 
                         sm:relative sm:translate-y-0 sm:flex-col sm:p-0 sm:border-y-transparent sm:justify-center
                         `}
@@ -81,7 +103,7 @@ const Content = ({ name, data, activeTab, setActiveTab, mainImage }: Props) => {
                                 setActiveTab={setActiveTab}
                             />
                         ))}
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </div>
