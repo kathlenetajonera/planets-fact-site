@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { antonio, league_spartan } from './fonts';
 import Header from '@/_components/Header';
+import Attribution from '@/_components/Attribution';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -23,6 +24,7 @@ export default function RootLayout({
                     <Header />
                     {children}
                 </div>
+                <Attribution />
             </body>
         </html>
     );

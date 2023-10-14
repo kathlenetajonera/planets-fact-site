@@ -10,7 +10,7 @@ const NavList = ({ isNavOpen }: Props) => {
                     ? 'opacity-1 pointer-events-auto'
                     : 'opacity-0 pointer-events-none'
             } transition-opacity duration-300 
-            sm:relative sm:top-0 sm:h-8 sm:flex sm:justify-between sm:w-full sm:mt-10
+            sm:bg-transparent sm:relative sm:top-0 sm:h-8 sm:flex sm:justify-between sm:w-full sm:mt-10
             xl:mt-0 xl:flex-1 xl:justify-end xl:h-full`}
         >
             {data.map(({ id, label }) => (

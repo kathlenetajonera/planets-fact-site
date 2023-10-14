@@ -12,16 +12,18 @@ const Header = () => {
     const [isNavOpen, setIsNavOpen] = useState(false);
 
     useEffect(() => {
-        if (isTablet) {
-            setIsNavOpen(true);
-        }
+        if (isTablet) setIsNavOpen(true);
     }, [isTablet]);
 
     useEffect(() => {
-        if (isMobile) {
-            setIsNavOpen(false);
-        }
+        if (isMobile) setIsNavOpen(false);
     }, [pathname, isMobile]);
+
+    useEffect(() => {
+        isMobile
+            ? (document.body.style.overflow = isNavOpen ? 'hidden' : 'auto')
+            : (document.body.style.overflow = 'auto');
+    }, [isMobile, isNavOpen]);
 
     return (
         <nav
