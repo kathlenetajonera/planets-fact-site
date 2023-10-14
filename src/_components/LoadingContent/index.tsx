@@ -1,6 +1,6 @@
 const LoadingContent = () => {
     return (
-        <div className="animate-pulse relative text-center px-8 pb-8 mt-32 sm:mt-0 xl:pb-20 xl:flex xl:px-0 xl:mt-24">
+        <div className="animate-pulse relative text-center px-6 pb-8 mt-32 sm:mt-0 xl:pb-20 xl:flex xl:px-0 xl:mt-24">
             <div className="relative my-16 xl:basis-full xl:mt-12">
                 <div className="h-52 bg-loading rounded-md mx-auto sm:w-80 sm:h-64 xl:w-[28rem] xl:h-[28rem]" />
             </div>
@@ -13,7 +13,7 @@ const LoadingContent = () => {
                 </div>
 
                 <div
-                    className={`absolute top-0 left-0 -translate-y-[124px] flex justify-between px-8 w-full
+                    className={`absolute top-0 left-0 -translate-y-[124px] flex justify-between px-6 w-full
                         sm:relative sm:translate-y-0 sm:flex-col sm:p-0 sm:justify-center sm:items-start sm:basis-2/5
                     `}
                 >
