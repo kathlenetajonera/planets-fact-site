@@ -24,7 +24,7 @@ const Content = ({ name, data, activeTab, setActiveTab, mainImage }: Props) => {
 
     return (
         <div>
-            <div className="relative text-center px-8 pb-8 mt-32 sm:mt-0 xl:pb-20 xl:flex xl:px-0 xl:mt-24">
+            <div className="relative text-center px-6 pb-8 mt-32 sm:mt-0 sm:px-8 xl:pb-20 xl:flex xl:px-0 xl:mt-24">
                 <div className="relative my-16 xl:basis-full xl:mt-12">
                     <motion.div variants={imageVariant}>
                         <Image
@@ -89,7 +89,7 @@ const Content = ({ name, data, activeTab, setActiveTab, mainImage }: Props) => {
 
                     <motion.div
                         variants={tabVariant}
-                        className={`absolute top-0 left-0 -translate-y-[124px] flex justify-between w-full border-y-[1px] border-y-light-gray px-8 
+                        className={`absolute top-0 left-0 -translate-y-[124px] flex justify-between w-full border-y-[1px] border-y-light-gray px-6 
                         sm:relative sm:translate-y-0 sm:flex-col sm:p-0 sm:border-y-transparent sm:justify-center
                         `}
                     >

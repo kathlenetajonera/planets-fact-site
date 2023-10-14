@@ -1,11 +1,12 @@
-'use client';
-import { useState } from 'react';
+import { Props } from '../types';
 
-const Navicon = () => {
-    const [isNavOpen, setIsNavOpen] = useState(false);
+const Navicon = ({ isNavOpen, setIsNavOpen }: Props) => {
+    const handleToggle = () => {
+        setIsNavOpen && setIsNavOpen(!isNavOpen);
+    };
 
     return (
-        <button className="sm:hidden" onClick={() => setIsNavOpen(!isNavOpen)}>
+        <button className="sm:hidden" onClick={handleToggle}>
             <span
                 className={`block w-7 h-1 bg-white rounded-full mb-1 transition-transform origin-[3px_4px] ${
                     isNavOpen ? 'rotate-45' : ''

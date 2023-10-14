@@ -11,7 +11,7 @@ const Overview = ({ details }: Props) => {
     return (
         <motion.div
             variants={containerVariant}
-            className="px-8 mb-12 sm:flex xl:px-0"
+            className="px-6 mb-12 sm:flex sm:px-8 xl:px-0"
         >
             {details.map(({ key, label, value }) => (
                 <DetailCard key={key} label={label} value={value} />

@@ -23,7 +23,7 @@ const TabButton = ({ name, btn, index, activeTab, setActiveTab }: Props) => {
     return (
         <motion.button
             variants={staggerVariant}
-            className={`text-xs font-medium uppercase tracking-widest py-5 relative overflow-hidden transition-[background] after:content-[''] after:block after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-[115%] after:h-1 ${dynamicAccent} after:transition-transform 
+            className={`text-xs font-medium uppercase tracking-widest py-5 relative overflow-hidden transition-[background] after:content-[''] after:block after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-[115%] after:h-1 ${dynamicAccent}
             sm:text-left sm:after:content-none sm:border-[1px] sm:border-light-gray sm:py-4 sm:px-6 sm:text-xs sm:mb-4 sm:last:mb-0 sm:min-w-[16.75rem] ${
                 index === activeTab
                     ? `after:translate-y-0 ${dynamicAccentActive}`
